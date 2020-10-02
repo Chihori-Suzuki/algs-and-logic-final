@@ -6,6 +6,15 @@
 
 const addSAnd20 = function (arr) {
     // your code here
+    for(i = 0; i < arr.length; i++){
+        if (typeof arr[i] === 'number'){ //if type is number
+            arr[i] += 20; // arr[0]: 56 + 20
+        } else if(typeof arr[i] === 'string'){ //if type is string
+            arr[i] += 's'; // arr[1]: 'dog' + 's'
+        } 
+    }
+    // console.log(arr);
+    return arr;
 }
 
 

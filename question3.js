@@ -10,7 +10,25 @@ what it does and why.
 
 const kebabCase = function (str) {
     // your code here
+    let newStr = '';
+    if(str === ''){
+        newStr = 'This is an empty string!'
+    }else{    
+        str = str.split(' '); // arr[0]: ['Coding','Is','Fun']
+        for (i = 0; i < str.length; i++){ // loop each eloment in str
+            if(i === 0){
+                newStr += str[i].charAt(0).toUpperCase() + str[i].slice(1).toLowerCase(); //'C' + 'oding'
+            }else{
+                newStr += '-' + str[i].charAt(0).toUpperCase() + str[i].slice(1).toLowerCase(); // '-' + 'I' + 's' // '-' + 'F' + 'un'
+            }
+        }
+    }
+
+    
+    return newStr;
 }
+
+// kebabCase('this STrIng has Weird casing');
 
 console.log((kebabCase('Coding Is Fun') === 'Coding-Is-Fun') ? "Test 1: Passing" : "Test 1: Failing");
 

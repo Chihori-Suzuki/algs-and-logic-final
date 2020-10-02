@@ -7,6 +7,14 @@ return the entire array with the converted strings
 */
 const snakeCaseArr = function (arr) {
     // your code here. 
+    
+    for (i = 0; i < arr.length; i++){ //['Coding Is Fun', 'Dogs ARE cool']
+        arr[i] = arr[i].toLowerCase();  // arr[0]: 'coding is fun'
+        arr[i] = arr[i].split(' ').join('_'); // arr[0]: ['coding','is','fun'](split) -> 'coding_is_fun'(join)
+    }
+    console.log(arr);
+    return arr;
+
 }
 
 console.log((snakeCaseArr(['Coding Is Fun']) === ['coding_is_fun']) ? "Test 1: Passing" : "Test 1: Failing");
